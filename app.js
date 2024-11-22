@@ -28,10 +28,10 @@ function createPost() {
         <div class="card-footer">
             <div class="d-flex justify-content-between align-items-center">
                 <button class="btn btn-link text-muted like-btn" onclick="likePost(this)">
-                    <i class="like fas fa-thumbs-up"></i> Like (<span class="like-count">0</span>)
+                    <i class="like fas fa-thumbs-up"></i> Like <span class="like-count">0</span>
                 </button>
                 <button class="btn btn-link text-muted" onclick="Comments(this)">
-                    <i class="fas fa-comment"></i> Comment (<span class="comment-count">0</span>)
+                    <i class="fas fa-comment"></i> Comment <span class="comment-count">0</span>
                 </button>
                 <button class="btn btn-link text-muted">
                     <i class="fas fa-share"></i> Share
