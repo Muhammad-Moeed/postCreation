@@ -34,3 +34,10 @@ color: black !important;
 input[type="radio"]:checked + img {
     border: 2px solid blue;
 }
+@media (max-width: 768px) {
+    .container {
+        padding: 30px;
+        
+    }
+   
+}
