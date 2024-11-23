@@ -1,0 +1,50 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    background-image: url(assets/bg.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.card{
+    background-color: rgba(208, 208, 208,0.5);
+    backdrop-filter: blur(4px);
+}
+input.form-control,textarea.form-control{
+    background-color: rgba(208, 208, 208,0.5);
+    border: 1px solid rgb(98, 98, 98);
+}
+input.form-control:focus, textarea.form-control:focus {
+    background-color: rgba(208, 208, 208, 0.5);
+    border: 1px solid rgba(0, 0, 0, 0.4); 
+    outline: none; 
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+}
+input[type="radio"] {
+    display: none;
+}
+label, label img {
+    cursor: pointer;
+}
+.form-group > label{
+color: black !important;
+}
+.form-group img{
+    height: 50px;
+}
+input[type="radio"]:checked + img {
+    border: 2px solid blue;
+}
+.post-btn{
+    background-color:rgb(90, 133, 164);
+    border: none;
+}
+.post-btn:hover{
+    background-color:rgb(26, 67, 97);
+}
+@media (max-width: 768px) {
+    .container {
+        padding: 30px;
+        
+    }
+   
+}

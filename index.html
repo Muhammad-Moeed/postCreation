@@ -1,76 +1,327 @@
+<!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="utf-8" />
-    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-    <title>Post Creator</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Facebook</title>
     <link rel="icon" href="assets/favicon.png" type="image/png" />
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet" />
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="style.css">
-    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.5/bootstrap-icons.svg">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
-<body class="bg-light">
-    <div class="container mt-1">
-        <div class="row">
-            <div class="card col-lg-6 col-sm-12 col-md-6">
-                <div class="card-body">
-                    <div class="d-flex justify-content-between align-items-center mb-4">
-                        <h2 class="card-title">Create Post</h2>
-                    </div>
-                    <div class="d-flex align-items-center mb-4">
-                        <img alt="Profile pic" class="rounded-circle mr-2" width="80px" height="80" src="assets/moeed logo.png" />
-                        <div>
-                            <div class="font-weight-bold">Muhammad Moeed</div>
-                            <div class="text-muted small d-flex align-items-center">
-                                <i class="fas fa-globe-americas mr-1"></i> Public
-                            </div>
-                        </div>
-                    </div>
-                    <input class="form-control mb-3" id="username" placeholder="Enter your username" type="text" />
-                    <input class="form-control mb-3" id="title" placeholder="Enter post title" type="text" />
-                    <textarea class="form-control mb-3" id="description" placeholder="Write something to Recur Post..." rows="3"></textarea>
-                    <div class="d-flex justify-content-between align-items-center mt-4">
-                        <button class="btn">
-                            <i class="fas fa-smile text-muted"></i>
-                        </button>
-                        <button class="btn">
-                            <i class="fas fa-paper-plane text-muted"></i>
-                        </button>
-                    </div>
-                    <div class="border-top mt-4 pt-4">
-                        <div class="form-group">
-                            <label class="text-muted">Select Background Image</label>
-                            <div class="d-flex">
-                                <label class="mr-3">
-                                    <input name="background" type="radio" value="assets/bg1.jpeg" />
-                                    <img alt="Background image 1:" class="img-thumbnail" height="50" src="assets/bg1.jpeg" width="50" />
-                                </label>
-                                <label class="mr-3">
-                                    <input name="background" type="radio" value="assets/bg2.jpg" />
-                                    <img alt="Background image 2:" class="img-thumbnail" height="50" src="assets/bg2.jpg" width="50" />
-                                </label>
-                                <label class="mr-3">
-                                    <input name="background" type="radio" value="assets/bg3.jpg" />
-                                    <img alt="Background image 3:" class="img-thumbnail" height="50" src="assets/bg3.jpg" width="50" />
-                                </label>
-                                <label class="mr-3">
-                                    <input name="background" type="radio" value="assets/bg4.jpg" />
-                                    <img alt="Background image 4" class="img-thumbnail" height="50" src="assets/bg4.jpg" width="50" />
-                                </label>
-                            </div>
-                        </div>
-                    </div>
-                    <button class="post-btn btn btn-secondary btn-block mt-4" onclick="createPost()" type="button">Post</button>
+
+<body>
+    <div class="header">
+        <nav class="navbar">
+            <div class="left-nav">
+                <i class='bx bxl-facebook-circle'></i>
+                <div class="input-text">
+                    <i class='bx bx-search'></i>
+                    <input type="text" placeholder="Search Facebook" id="Search">
                 </div>
             </div>
-            <div class="container mt-4 col-lg-6 col-sm-12 col-md-6" id="postContainer"></div>
+            <div class="middle-nav">
+                <i class='bx bxs-home active'></i>
+                <i class="fa-solid fa-store"></i>
+                <i class="fa-solid fa-users"></i>
+            </div>
+            <div class="right-nav">
+                <i class="fa-solid fa-bars" class="bb"></i>
+                <i class='bx bxs-message-rounded-dots' class="bb"></i>
+                <i class='bx bxs-bell' class="bb"></i>
+                <div class="dark-mode">
+                    <span></span>
+                </div>
+                <img src="../src/img-remove.png" alt="">
+
+            </div>
+        </nav>
+    </div>
+    <!-- -----------------slider-left---------- -->
+    <div class="slider-left">
+        <div class="left-sections">
+            <img src="assets/moeed logo.png" alt="">
+            <p>Muhammad Moeed</p>
+            <i class="fa-solid fa-user-group">
+                <p>Friends</p>
+            </i>
+            <i class="fa-solid fa-clock-rotate-left">
+                <p>Memories</p>
+            </i>
+            <i class="fa-solid fa-bookmark">
+                <p>Saved</p>
+            </i>
+            <i class="fa-solid fa-users">
+                <p>Groups</p>
+            </i>
+            <i class="fa-solid fa-store">
+                <p>Marketplace</p>
+            </i>
+            <i class="fa-regular fa-note-sticky">
+                <p>Feeds</p>
+            </i>
+            <i class="fa-solid fa-calendar">
+                <p>Events</p>
+            </i>
+            <i class="fa-solid fa-chart-simple">
+                <p>Ads Manger</p>
+            </i>
+            <i class="fa-solid fa-heart">
+                <p>Fundraisers</p>
+            </i>
+            <i class='bx bx-chevron-down'>
+                <p>See more</p>
+            </i>
+
+            <div class="text">
+                <h3>Privacy . Terms . Advertising <a href="https://www.facebook.com/help/568137493302217">Ad
+                        choices</a> .Cookies .</h3>
+                <p>More.Meta &copy; 2024</p>
+            </div>
+
+            <img src="../src/img-remove.png" alt="">
+            <p>Muhammad Moeed</p>
+            <i class="fa-solid fa-user-group">
+                <p>Friends</p>
+            </i>
+            <i class="fa-solid fa-clock-rotate-left">
+                <p>Memories</p>
+            </i>
+            <i class="fa-solid fa-bookmark">
+                <p>Saved</p>
+            </i>
+            <i class="fa-solid fa-users">
+                <p>Groups</p>
+            </i>
         </div>
+
+
     </div>
 
-    <script src="app.js"></script>
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <!-- -----------------------container-middile---- -->
+
+    <div class="container">
+        <div class="first-container">
+            <div class="box-story">
+                <img src="assets/moeed logo.png" alt="" style="opacity: 0.7;">
+                <i class='bx bx-plus'></i>
+                <p style="position: relative;
+                bottom: 10rem;">Create Story</p>
+            </div>
+            <div class="box-story">
+                <img src="assets/moeed.jpg" alt="">
+                <p>Your Story</p>
+            </div>
+            <div class="box-story">
+                <img src="assets/anus.jpg" alt="">
+                <p>Hafiz Usama</p>
+            </div>
+            <div class="box-story">
+                <img src="assets/amir.jpg" alt="">
+                <p>Babar Qadri</p>
+            </div>
+        </div>
+
+        <div class="Second-container">
+            <div class="first-one">
+                <img src="assets/moeed logo.png" alt="">
+                <input type="text" placeholder="What's on your mind, Muhammad Moeed?" id="search-user">
+            </div>
+            <hr>
+            <div class="second-one">
+                <a href=""><img src="https://static.xx.fbcdn.net/rsrc.php/v3/yF/r/v1iF2605Cb5.png">
+                    <p>Live video</p>
+                </a>
+                <a href="./post.html"><img src="https://static.xx.fbcdn.net/rsrc.php/v3/yC/r/a6OjkIIE-R0.png">
+                    <p>Photo/video</p>
+                </a>
+                <a href=""><img src="https://static.xx.fbcdn.net/rsrc.php/v3/yk/r/yMDS19UDsWe.png">
+                    <p>Feeling/active</p>
+                </a>
+            </div>
+        </div>
+
+        <div class="user-container">
+            <div class="sub-contaiber">
+                <div>
+                    <div class="first-con">
+                        <img src="assets/huzaifa.jpg">
+                        <div>
+                            <h3>Huzaifa Attari</h3>
+                            <p>9 h &dot;<i class="fa-solid fa-earth-americas"></i></p>
+                        </div>
+                    </div>
+
+                </div>
+                <div>
+                    <i class="fa-solid fa-ellipsis"></i>
+                </div>
+            </div>
+            <div class="text-content">
+                <img style="width: 100%;" src="assets/huzaifa.jpg" alt="">
+            </div>
+            
+            <div class="like-row">
+                <div class="first-like">
+                    <div>
+                        <i class="fa-solid fa-thumbs-up"></i>
+                        <i class="fa-solid fa-heart heart"></i>
+                        <span>120</span>
+                    </div>
+                    <div>
+                        <span>90 comment</span>
+                        <span>0 shares</span>
+                    </div>
+                </div>
+                <hr>
+                <div class="second-like">
+                    <div> <i class="fa-regular fa-thumbs-up"></i><span>Like</span></div>
+
+                    <div><i class="fa-regular fa-message"></i><span>Comment</span></div>
+
+                    <div><i class="fa-solid fa-share"></i><span>Share</span></div>
+                </div>
+            </div>
+        </div>
+
+
+
+        <div class="user-container">
+            <div class="sub-contaiber">
+                <div>
+                    <div class="first-con">
+                        <img src="assets/areeb.jpg">
+                        <div>
+                            <h3>Areeb Attari</h3>
+                            <p>1 h &dot;<i class="fa-solid fa-earth-americas"></i></p>
+                        </div>
+                    </div>
+
+                </div>
+                <div>
+                    <i class="fa-solid fa-ellipsis"></i>
+                </div>
+            </div>
+            <div class="text-content">
+                <p>الحَمْدُ ِلله دعوت اسلامی کا چندہ آپ کے بچوں کے مستقبل کو سوارنے میں لگ رہا ہے۔۔ لہذا۔۔
+                    آج دعوت اسلامی کے تحت ہونے والی فنڈ ریزنگ مہم ٹیلیتھون میں حسب توفیق اپنا حصہ ملاۓ۔❤</p>
+            </div>
+            <div class="image-content">
+                <img src="assets/areeeb post.jpg">
+            </div>
+            <div class="like-row">
+                <div class="first-like">
+                    <div>
+                        <i class="fa-solid fa-thumbs-up"></i>
+                        <i class="fa-solid fa-heart heart"></i>
+                        <span>220</span>
+                    </div>
+                    <div>
+                        <span>40 comment</span>
+                        <span>11 shares</span>
+                    </div>
+                </div>
+                <hr>
+                <div class="second-like">
+                    <div> <i class="fa-regular fa-thumbs-up"></i><span>Like</span></div>
+
+                    <div><i class="fa-regular fa-message"></i><span>Comment</span></div>
+
+                    <div><i class="fa-solid fa-share"></i><span>Share</span></div>
+                </div>
+            </div>
+        </div>
+
+       
+
+
+
+    <!-- --------------right-side-------- -->
+
+    <div class="slider-right">
+        <div class="top-container">
+            <h3>Sponsored</h3>
+            <div class="cont">
+                <div class="box-con">
+                    <img
+                        src="assets/add1.jpg">
+                    <div>
+                        <h2> Ticktok Views Only Today Offer</h2>
+                        <a
+                            href="https://www.sony.co.in/bravia/products/x90l-x91bl-series?cid=scp-in-27354&fbclid=IwAR3zZUvaqSjK4-XPUysW_RlxX1fT634ZzRcuCupgNKd53gdFMdxVvMflIVs"> dogarview.com    </a>
+                    </div>
+
+                </div>
+                <div class="box-con">
+                    <img
+                        src="assets/add2.jpg">
+                    <div>
+                        <h2>Mobile Network Course</h2>
+                        <a
+                            href="https://www.fireboltt.com/products/vogue?utm_source=facebook&utm_medium=conversion&utm_campaign=Conversion_SW_Vogue_30102023_Sustainable_New_Interest_Open_India_All&fbclid=IwAR2xNfoFcDe-IP3Aa8cdlYDSsb0tZgSq1rq823XuwOIhOhWQuxJklFdeOpI">lerner.com</a>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+        <hr>
+        <div class="middle-con">
+            <div class="first-con">
+                <div>
+                    Friend requests
+                </div>
+                <div><span>See All</span></div>
+            </div>
+            <div class="second-con">
+                <div>
+                    <img src="assets/habib.jpg" alt="">
+                </div>
+                <div class="text-con">
+                    <h2>Abdul Habib Attari</h2>
+                    <div><span>500 mutual friends</span></div>
+                    <div class="btn-con">
+                        <div> <a href="" class="conf">Confirm</a></div>
+                        <div> <a href="" class="delete">Delete</a></div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <hr>
+        <div class="birth-con">
+            <div class="first-con">
+                <h2>Birthdays</h2>
+            </div>
+            <div>
+                <i class="fa-solid fa-gift"></i>
+                <p> <span>Muhammad Moeed</span> birthday is today</p>
+            </div>
+        </div>
+        <hr>
+        <div class="friend-con">
+            <div class="first-fr">
+                <div>
+                    <h2>Contact</h2>
+                </div>
+                <div><i class="fa-solid fa-magnifying-glass"></i>
+                    <i class="fa-solid fa-ellipsis"></i>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="message">
+        <i class="fa-regular fa-pen-to-square"></i>
+    </div>
+
+
 </body>
+<script src="app.js"></script>
+
 </html>
